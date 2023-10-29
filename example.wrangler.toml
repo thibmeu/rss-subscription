@@ -1,0 +1,18 @@
+name = "rss"
+main = "src/index.js"
+compatibility_date = "2023-10-27"
+account_id = "<your account ID here>"
+workers_dev = false
+
+[triggers]
+crons = [ "0 0 * * *" ]
+
+[vars]
+SENDER_EMAIL = "no-reply@example.test"
+RECIPIENT_EMAILS = ["no-reply@example.test"]
+BLOGS = { "Writer 1" = "https://example1.test", "Writer 2" = "https://example1.test" }
+
+[[send_email]]
+type = "send_email"
+name = "EMAIL"
+allowed_destination_addresses = ["no-reply@example.test"]
